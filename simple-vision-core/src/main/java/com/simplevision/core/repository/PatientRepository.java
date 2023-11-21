@@ -5,7 +5,7 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface InfoRepository extends CrudRepository<Info, Long> {
+public interface PatientRepository extends CrudRepository<Info, Long> {
     Info findByPhoneNumber(String number);
     Info findByEmail(String email);
 }
