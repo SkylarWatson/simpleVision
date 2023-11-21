@@ -1,5 +1,6 @@
 package com.simplevision.core.mapper;
 
+import com.simplevision.core.domain.IPrescription;
 import com.simplevision.core.domain.Info;
 import com.simplevision.core.view.PrescriptionDetails;
 import com.simplevision.core.view.PrescriptionView;
@@ -7,29 +8,29 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class PrescriptionMapper {
-    public PrescriptionView map(Info info) {
+    public PrescriptionView map(IPrescription prescription) {
         PrescriptionView prescriptionView = new PrescriptionView();
-        prescriptionView.setId(info.getId());
-        prescriptionView.setPd(info.getPD());
-        prescriptionView.setOS(mapOS(info));
-        prescriptionView.setOD(mapOD(info));
+        prescriptionView.setId(prescription.getId());
+        prescriptionView.setPd(prescription.getPD());
+        prescriptionView.setOS(mapOS(prescription));
+        prescriptionView.setOD(mapOD(prescription));
 
         return prescriptionView;
     }
 
-    private PrescriptionDetails mapOS(Info info) {
+    private PrescriptionDetails mapOS(IPrescription prescription) {
         PrescriptionDetails os = new PrescriptionDetails();
-        os.setAxis(info.getLeftAxis());
-        os.setCylinder(info.getLeftCylinder());
-        os.setSphere(info.getLeftSphere());
+        os.setAxis(prescription.getLeftAxis());
+        os.setCylinder(prescription.getLeftCylinder());
+        os.setSphere(prescription.getLeftSphere());
         return os;
     }
 
-    private PrescriptionDetails mapOD(Info info) {
+    private PrescriptionDetails mapOD(IPrescription prescription) {
         PrescriptionDetails od = new PrescriptionDetails();
-        od.setAxis(info.getRightAxis());
-        od.setCylinder(info.getRightCylinder());
-        od.setSphere(info.getRightSphere());
+        od.setAxis(prescription.getRightAxis());
+        od.setCylinder(prescription.getRightCylinder());
+        od.setSphere(prescription.getRightSphere());
         return od;
     }
 
