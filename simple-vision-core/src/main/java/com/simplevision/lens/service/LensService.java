@@ -1,9 +1,9 @@
 package com.simplevision.lens.service;
 
-import com.simplevision.core.domain.Lens;
+import com.simplevision.lens.domain.Lens;
 import com.simplevision.lens.mapper.LensMapper;
 import com.simplevision.lens.repository.LensRepository;
-import com.simplevision.core.view.LensView;
+import com.simplevision.lens.view.LensView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
