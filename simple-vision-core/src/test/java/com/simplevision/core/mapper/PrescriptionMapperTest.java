@@ -1,6 +1,6 @@
 package com.simplevision.core.mapper;
 
-import com.simplevision.core.domain.Info;
+import com.simplevision.core.domain.Prescription;
 import com.simplevision.core.view.PrescriptionDetails;
 import com.simplevision.core.view.PrescriptionView;
 import org.junit.jupiter.api.BeforeEach;
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PrescriptionMapperTest {
     private PrescriptionMapper mapper;
-    private Info info;
+    private Prescription info;
 
     private PrescriptionView prescription;
     private PrescriptionDetails od;
@@ -19,7 +19,7 @@ public class PrescriptionMapperTest {
     @BeforeEach
     public void setup() {
         mapper = new PrescriptionMapper();
-        info = new Info();
+        info = new Prescription();
 
         prescription = new PrescriptionView();
         od = new PrescriptionDetails();
