@@ -1,7 +1,6 @@
 package com.simplevision.core.controller;
 
 import com.simplevision.core.service.InfoService;
-import com.simplevision.core.view.LensView;
 import com.simplevision.core.view.PatientView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -22,11 +21,6 @@ public class InfoController {
         service.create(patient);
     }
 
-    @PostMapping("/lens")
-    public void create(@RequestBody LensView lens) {
-            service.create(lens);
-    }
-
     @GetMapping("/patient")
     public PatientView findPatientBy(@RequestParam(required = false) String email, @RequestParam(required = false) String phone) {
         if (email != null) {
@@ -35,10 +29,5 @@ public class InfoController {
             return service.findPatientByPhone(phone);
         }
         return null;
-    }
-
-    @GetMapping("/lens")
-    public LensView findLensById(int id) {
-        return service.findLensById(id);
     }
 }

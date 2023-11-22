@@ -1,7 +1,6 @@
 package com.simplevision.core.controller;
 
 import com.simplevision.core.service.InfoService;
-import com.simplevision.core.view.LensView;
 import com.simplevision.core.view.PatientView;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -60,23 +59,5 @@ public class InfoControllerTest {
         controller.create(patient);
 
         verify(service).create(patient);
-    }
-
-    @Test
-    public void createLens() {
-        LensView lens = new LensView();
-
-        controller.create(lens);
-
-        verify(service).create(lens);
-    }
-
-    @Test
-    public void findLensById() {
-        LensView lens = new LensView();
-
-        when(service.findLensById(anyLong())).thenReturn(lens);
-
-        assertEquals(lens, controller.findLensById(1));
     }
 }
