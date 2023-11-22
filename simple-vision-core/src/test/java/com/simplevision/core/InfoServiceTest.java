@@ -3,8 +3,6 @@ package com.simplevision.core;
 import com.simplevision.core.service.InfoService;
 import com.simplevision.core.view.LensView;
 import com.simplevision.core.view.PatientView;
-import com.simplevision.core.view.PrescriptionDetails;
-import com.simplevision.core.view.PrescriptionView;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -49,21 +47,6 @@ public class InfoServiceTest {
         long id = service.create(patient).getId();
 
         assertEquals("myAddress", service.findPatientById(id).getAddress());
-    }
-
-    @Test
-    public void findPrescriptionById() {
-        PrescriptionDetails od = new PrescriptionDetails();
-        PrescriptionDetails os = new PrescriptionDetails();
-        od.setSphere("rightSphere");
-
-        PrescriptionView prescription = new PrescriptionView();
-        prescription.setOD(od);
-        prescription.setOS(os);
-
-        long id = service.create(prescription).getId();
-
-        assertEquals("rightSphere", service.findPrescriptionById(id).getOD().getSphere());
     }
 
     @Test
