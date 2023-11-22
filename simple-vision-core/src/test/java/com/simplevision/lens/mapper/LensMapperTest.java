@@ -1,7 +1,8 @@
-package com.simplevision.core.mapper;
+package com.simplevision.lens.mapper;
 
 import com.simplevision.core.domain.Lens;
 import com.simplevision.core.view.LensView;
+import com.simplevision.lens.mapper.LensMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

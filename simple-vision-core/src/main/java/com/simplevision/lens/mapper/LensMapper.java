@@ -1,4 +1,4 @@
-package com.simplevision.core.mapper;
+package com.simplevision.lens.mapper;
 
 import com.simplevision.core.domain.Lens;
 import com.simplevision.core.view.LensView;
