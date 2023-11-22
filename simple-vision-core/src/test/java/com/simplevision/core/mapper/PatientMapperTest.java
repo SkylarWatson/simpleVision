@@ -1,6 +1,6 @@
 package com.simplevision.core.mapper;
 
-import com.simplevision.core.domain.Info;
+import com.simplevision.core.domain.Patient;
 import com.simplevision.core.view.PatientView;
 import org.junit.jupiter.api.Test;
 
@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class PatientMapperTest {
     @Test
     public void mapToPatient_name() {
-        Info patient = new Info();
+        Patient patient = new Patient();
         patient.setName("name");
 
         assertEquals("name", new PatientMapper().map(patient).getName());
@@ -17,7 +17,7 @@ public class PatientMapperTest {
 
     @Test
     public void mapToPatient_address() {
-        Info patient = new Info();
+        Patient patient = new Patient();
         patient.setAddress("address");
 
         assertEquals("address", new PatientMapper().map(patient).getAddress());
@@ -25,7 +25,7 @@ public class PatientMapperTest {
 
     @Test
     public void mapToPatient_phone() {
-        Info patient = new Info();
+        Patient patient = new Patient();
         patient.setPhoneNumber("phone");
 
         assertEquals("phone", new PatientMapper().map(patient).getPhoneNumber());
@@ -33,7 +33,7 @@ public class PatientMapperTest {
 
     @Test
     public void mapToPatient_email() {
-        Info patient = new Info();
+        Patient patient = new Patient();
         patient.setEmail("email");
 
         assertEquals("email", new PatientMapper().map(patient).getEmail());
