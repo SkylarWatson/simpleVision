@@ -1,6 +1,5 @@
 package com.simplevision.core.mapper;
 
-import com.simplevision.core.domain.ILens;
 import com.simplevision.core.domain.Lens;
 import com.simplevision.core.view.LensView;
 import org.springframework.stereotype.Component;
@@ -15,7 +14,7 @@ public class LensMapper {
         return lens;
     }
 
-    public LensView map(ILens lens) {
+    public LensView map(Lens lens) {
         LensView lensView = new LensView();
         lensView.setMaterial(lens.getLensMaterial());
         lensView.setStyle(lens.getLensStyle());
