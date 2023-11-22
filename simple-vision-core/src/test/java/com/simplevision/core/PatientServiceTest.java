@@ -1,6 +1,6 @@
 package com.simplevision.core;
 
-import com.simplevision.core.service.InfoService;
+import com.simplevision.core.service.PatientService;
 import com.simplevision.core.view.PatientView;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,8 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-public class InfoServiceTest {
-    @Autowired private InfoService service;
+public class PatientServiceTest {
+    @Autowired private PatientService service;
     private PatientView patient;
 
     @BeforeEach

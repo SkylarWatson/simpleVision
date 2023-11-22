@@ -1,6 +1,6 @@
 package com.simplevision.core.controller;
 
-import com.simplevision.core.service.InfoService;
+import com.simplevision.core.service.PatientService;
 import com.simplevision.core.view.PatientView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @EnableAutoConfiguration
-public class InfoController {
-    @Autowired private InfoService service;
+public class PatientController {
+    @Autowired private PatientService service;
 
     @GetMapping("/patient/{id}")
     public PatientView findPatientById(@PathVariable("id") int id) {

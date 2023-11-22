@@ -1,6 +1,6 @@
 package com.simplevision.core.controller;
 
-import com.simplevision.core.service.InfoService;
+import com.simplevision.core.service.PatientService;
 import com.simplevision.core.view.PatientView;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -16,9 +16,9 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
-public class InfoControllerTest {
-    @InjectMocks private InfoController controller;
-    @Mock private InfoService service;
+public class PatientControllerTest {
+    @InjectMocks private PatientController controller;
+    @Mock private PatientService service;
 
     @Test
     public void findPatientById() {
