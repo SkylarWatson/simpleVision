@@ -1,4 +1,4 @@
-package com.simplevision.core.domain;
+package com.simplevision.lens.domain;
 
 import javax.persistence.*;
 

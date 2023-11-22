@@ -1,6 +1,6 @@
 package com.simplevision.lens.controller;
 
-import com.simplevision.core.view.LensView;
+import com.simplevision.lens.view.LensView;
 import com.simplevision.lens.service.LensService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

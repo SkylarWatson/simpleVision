@@ -1,7 +1,7 @@
 package com.simplevision.lens.mapper;
 
-import com.simplevision.core.domain.Lens;
-import com.simplevision.core.view.LensView;
+import com.simplevision.lens.domain.Lens;
+import com.simplevision.lens.view.LensView;
 import org.springframework.stereotype.Component;
 
 @Component

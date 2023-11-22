@@ -1,6 +1,6 @@
 package com.simplevision.lens.repository;
 
-import com.simplevision.core.domain.Lens;
+import com.simplevision.lens.domain.Lens;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

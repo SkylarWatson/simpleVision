@@ -1,7 +1,6 @@
 package com.simplevision.lens.service;
 
-import com.simplevision.core.service.InfoService;
-import com.simplevision.core.view.LensView;
+import com.simplevision.lens.view.LensView;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;

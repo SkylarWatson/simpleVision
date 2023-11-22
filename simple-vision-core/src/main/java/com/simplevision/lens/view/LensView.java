@@ -1,4 +1,4 @@
-package com.simplevision.core.view;
+package com.simplevision.lens.view;
 
 public class LensView {
     String material;

@@ -1,6 +1,6 @@
 package com.simplevision.lens.controller;
 
-import com.simplevision.core.view.LensView;
+import com.simplevision.lens.view.LensView;
 import com.simplevision.lens.service.LensService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
