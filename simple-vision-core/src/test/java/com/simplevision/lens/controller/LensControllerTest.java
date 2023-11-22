@@ -1,7 +1,7 @@
 package com.simplevision.lens.controller;
 
-import com.simplevision.core.service.InfoService;
 import com.simplevision.core.view.LensView;
+import com.simplevision.lens.service.LensService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -16,7 +16,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class LensControllerTest {
     @InjectMocks private LensController controller;
-    @Mock private InfoService service;
+    @Mock private LensService service;
 
     @Test
     public void createLens() {
