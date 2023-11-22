@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Info implements IPrescription, ILens, IPatient {
+public class Info {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;

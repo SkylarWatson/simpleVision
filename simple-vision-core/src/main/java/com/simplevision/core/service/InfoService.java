@@ -1,6 +1,5 @@
 package com.simplevision.core.service;
 
-import com.simplevision.core.domain.IPatient;
 import com.simplevision.core.domain.Info;
 import com.simplevision.core.domain.Lens;
 import com.simplevision.core.domain.Prescription;
