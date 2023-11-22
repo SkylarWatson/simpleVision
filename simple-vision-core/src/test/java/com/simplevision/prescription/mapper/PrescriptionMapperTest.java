@@ -1,9 +1,8 @@
 package com.simplevision.prescription.mapper;
 
-import com.simplevision.core.domain.Prescription;
-import com.simplevision.core.view.PrescriptionDetails;
-import com.simplevision.core.view.PrescriptionView;
-import com.simplevision.prescription.mapper.PrescriptionMapper;
+import com.simplevision.prescription.domain.Prescription;
+import com.simplevision.prescription.view.PrescriptionDetails;
+import com.simplevision.prescription.view.PrescriptionView;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

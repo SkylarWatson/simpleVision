@@ -1,4 +1,4 @@
-package com.simplevision.core.domain;
+package com.simplevision.prescription.domain;
 
 import javax.persistence.*;
 
