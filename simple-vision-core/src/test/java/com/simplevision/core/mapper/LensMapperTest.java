@@ -1,6 +1,6 @@
 package com.simplevision.core.mapper;
 
-import com.simplevision.core.domain.Info;
+import com.simplevision.core.domain.Lens;
 import com.simplevision.core.view.LensView;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -10,13 +10,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class LensMapperTest {
     private LensMapper mapper;
     private LensView lensView;
-    private Info info;
+    private Lens lens;
 
     @BeforeEach
     public void setup() {
         mapper = new LensMapper();
         lensView = new LensView();
-        info = new Info();
+        lens = new Lens();
     }
 
     @Test
@@ -42,22 +42,22 @@ public class LensMapperTest {
 
     @Test
     public void mapToLens_lensType() {
-        info.setLensMaterial("trivex");
+        lens.setLensMaterial("trivex");
 
-        assertEquals("trivex", mapper.map(info).getMaterial());
+        assertEquals("trivex", mapper.map(lens).getMaterial());
     }
 
     @Test
     public void mapToLens_visionType() {
-        info.setLensStyle("bifocals");
+        lens.setLensStyle("bifocals");
 
-        assertEquals("bifocals", mapper.map(info).getStyle());
+        assertEquals("bifocals", mapper.map(lens).getStyle());
     }
 
     @Test
     public void mapToLens_coating() {
-        info.setLensAdditions("reflective");
+        lens.setLensAdditions("reflective");
 
-        assertEquals("reflective", mapper.map(info).getAdditions());
+        assertEquals("reflective", mapper.map(lens).getAdditions());
     }
 }
