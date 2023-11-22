@@ -1,4 +1,4 @@
-package com.simplevision.core.repository;
+package com.simplevision.prescription.repository;
 
 import com.simplevision.core.domain.Prescription;
 import org.springframework.data.repository.CrudRepository;
