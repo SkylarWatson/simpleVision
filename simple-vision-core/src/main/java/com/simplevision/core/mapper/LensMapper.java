@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class LensMapper {
-    public Info map(LensView lens) {
-        Info info = new Info();
+    public ILens map(LensView lens) {
+        ILens info = new Info();
         info.setLensMaterial(lens.getMaterial());
         info.setLensStyle(lens.getStyle());
         info.setLensAdditions(lens.getAdditions());

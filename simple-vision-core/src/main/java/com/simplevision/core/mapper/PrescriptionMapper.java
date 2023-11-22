@@ -34,8 +34,8 @@ public class PrescriptionMapper {
         return od;
     }
 
-    public Info map(PrescriptionView prescriptionView) {
-        Info info = new Info();
+    public IPrescription map(PrescriptionView prescriptionView) {
+        IPrescription info = new Info();
         info.setRightSphere(prescriptionView.getOD().getSphere());
         info.setRightCylinder(prescriptionView.getOD().getCylinder());
         info.setRightAxis(prescriptionView.getOD().getAxis());
