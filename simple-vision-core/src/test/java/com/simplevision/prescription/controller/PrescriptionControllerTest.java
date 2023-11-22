@@ -2,6 +2,7 @@ package com.simplevision.prescription.controller;
 
 import com.simplevision.core.service.InfoService;
 import com.simplevision.core.view.PrescriptionView;
+import com.simplevision.prescription.service.PrescriptionService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -16,7 +17,7 @@ import static org.mockito.Mockito.when;
 @ExtendWith(MockitoExtension.class)
 public class PrescriptionControllerTest {
     @InjectMocks private PrescriptionController controller;
-    @Mock private InfoService service;
+    @Mock private PrescriptionService service;
 
     @Test
     public void createPrescription() {

@@ -2,6 +2,7 @@ package com.simplevision.prescription.controller;
 
 import com.simplevision.core.service.InfoService;
 import com.simplevision.core.view.PrescriptionView;
+import com.simplevision.prescription.service.PrescriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
@@ -9,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @EnableAutoConfiguration
 public class PrescriptionController {
-    @Autowired private InfoService service;
+    @Autowired private PrescriptionService service;
 
     @GetMapping("/prescription/{id}")
     public PrescriptionView findPrescriptionById(@PathVariable("id") int id) {
