@@ -1,4 +1,4 @@
-package com.simplevision.core.view;
+package com.simplevision.prescription.view;
 
 public class PrescriptionView {
     PrescriptionDetails OD;

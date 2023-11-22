@@ -1,7 +1,6 @@
 package com.simplevision.prescription.controller;
 
-import com.simplevision.core.service.InfoService;
-import com.simplevision.core.view.PrescriptionView;
+import com.simplevision.prescription.view.PrescriptionView;
 import com.simplevision.prescription.service.PrescriptionService;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

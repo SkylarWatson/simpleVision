@@ -1,8 +1,7 @@
 package com.simplevision.prescription.service;
 
-import com.simplevision.core.service.InfoService;
-import com.simplevision.core.view.PrescriptionDetails;
-import com.simplevision.core.view.PrescriptionView;
+import com.simplevision.prescription.view.PrescriptionDetails;
+import com.simplevision.prescription.view.PrescriptionView;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
