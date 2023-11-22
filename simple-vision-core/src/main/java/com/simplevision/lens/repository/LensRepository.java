@@ -1,4 +1,4 @@
-package com.simplevision.core.repository;
+package com.simplevision.lens.repository;
 
 import com.simplevision.core.domain.Lens;
 import org.springframework.data.repository.CrudRepository;
