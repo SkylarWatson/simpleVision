@@ -3,7 +3,6 @@ package com.simplevision.core.controller;
 import com.simplevision.core.service.InfoService;
 import com.simplevision.core.view.LensView;
 import com.simplevision.core.view.PatientView;
-import com.simplevision.core.view.PrescriptionView;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -21,15 +20,6 @@ import static org.mockito.Mockito.when;
 public class InfoControllerTest {
     @InjectMocks private InfoController controller;
     @Mock private InfoService service;
-
-    @Test
-    public void findPrescriptionById() {
-        PrescriptionView prescription = new PrescriptionView();
-
-        when(service.findPrescriptionById(anyLong())).thenReturn(prescription);
-
-        assertEquals(prescription, controller.findPrescriptionById(1));
-    }
 
     @Test
     public void findPatientById() {
@@ -70,15 +60,6 @@ public class InfoControllerTest {
         controller.create(patient);
 
         verify(service).create(patient);
-    }
-
-    @Test
-    public void createPrescription() {
-        PrescriptionView prescription = new PrescriptionView();
-
-        controller.create(prescription);
-
-        verify(service).create(prescription);
     }
 
     @Test
