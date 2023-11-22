@@ -1,7 +1,7 @@
 package com.simplevision.prescription.service;
 
 import com.simplevision.core.domain.Prescription;
-import com.simplevision.core.mapper.PrescriptionMapper;
+import com.simplevision.prescription.mapper.PrescriptionMapper;
 import com.simplevision.prescription.repository.PrescriptionRepository;
 import com.simplevision.core.view.PrescriptionView;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,4 +1,4 @@
-package com.simplevision.core.mapper;
+package com.simplevision.prescription.mapper;
 
 import com.simplevision.core.domain.Prescription;
 import com.simplevision.core.view.PrescriptionDetails;
