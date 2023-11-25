@@ -4,6 +4,8 @@ import com.simplevision.core.domain.Patient;
 import com.simplevision.core.view.PatientView;
 import org.junit.jupiter.api.Test;
 
+import java.util.UUID;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PatientMapperTest {
@@ -69,5 +71,25 @@ public class PatientMapperTest {
         patient.setAddress("address");
 
         assertEquals("address", new PatientMapper().map(patient).getAddress());
+    }
+
+    @Test
+    public void mapToPatient_prescriptionId() {
+        UUID uuid = UUID.randomUUID();
+
+        Patient patient = new Patient();
+        patient.setPrescriptionId(uuid);
+
+        assertEquals(uuid, new PatientMapper().map(patient).getPrescriptionId());
+    }
+
+    @Test
+    public void mapToInfo_prescriptionId() {
+        UUID uuid = UUID.randomUUID();
+
+        PatientView patient = new PatientView();
+        patient.setPrescriptionId(uuid);
+
+        assertEquals(uuid, new PatientMapper().map(patient).getPrescriptionId());
     }
 }

@@ -1,6 +1,7 @@
 package com.simplevision.core.domain;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
 @Table(name = "INFO")
@@ -13,6 +14,15 @@ public class Patient {
     private String address;
     private String email;
     private String phoneNumber;
+    private UUID prescriptionId;
+
+    public UUID getPrescriptionId() {
+        return prescriptionId;
+    }
+
+    public void setPrescriptionId(UUID prescriptionId) {
+        this.prescriptionId = prescriptionId;
+    }
 
     public String getName() {
         return name;

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 public class LensMapper {
     public Lens map(LensView lensView) {
         Lens lens = new Lens();
+        lens.setPrescriptionId(lensView.getPrescriptionId());
         lens.setLensMaterial(lensView.getMaterial());
         lens.setLensStyle(lensView.getStyle());
         lens.setLensAdditions(lensView.getAdditions());
@@ -16,6 +17,7 @@ public class LensMapper {
 
     public LensView map(Lens lens) {
         LensView lensView = new LensView();
+        lensView.setPrescriptionId(lens.getPrescriptionId());
         lensView.setMaterial(lens.getLensMaterial());
         lensView.setStyle(lens.getLensStyle());
         lensView.setAdditions(lens.getLensAdditions());

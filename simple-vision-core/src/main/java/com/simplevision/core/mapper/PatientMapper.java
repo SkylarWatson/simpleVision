@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 public class PatientMapper {
     public PatientView map(Patient patient) {
         PatientView patientView = new PatientView();
+        patientView.setPrescriptionId(patient.getPrescriptionId());
         patientView.setName(patient.getName());
         patientView.setAddress(patient.getAddress());
         patientView.setPhoneNumber(patient.getPhoneNumber());
@@ -17,6 +18,7 @@ public class PatientMapper {
 
     public Patient map(PatientView patient) {
         Patient info = new Patient();
+        info.setPrescriptionId(patient.getPrescriptionId());
         info.setName(patient.getName());
         info.setEmail(patient.getEmail());
         info.setPhoneNumber(patient.getPhoneNumber());

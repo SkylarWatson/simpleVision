@@ -5,6 +5,8 @@ import com.simplevision.lens.view.LensView;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.UUID;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class LensMapperTest {
@@ -59,5 +61,23 @@ public class LensMapperTest {
         lens.setLensAdditions("reflective");
 
         assertEquals("reflective", mapper.map(lens).getAdditions());
+    }
+
+    @Test
+    public void mapToLensView_prescriptionId() {
+        UUID prescriptionId = UUID.randomUUID();
+
+        lens.setPrescriptionId(prescriptionId);
+
+        assertEquals(prescriptionId, mapper.map(lens).getPrescriptionId());
+    }
+
+    @Test
+    public void mapToLens_prescriptionId() {
+        UUID prescriptionId = UUID.randomUUID();
+
+        lensView.setPrescriptionId(prescriptionId);
+
+        assertEquals(prescriptionId, mapper.map(lensView).getPrescriptionId());
     }
 }

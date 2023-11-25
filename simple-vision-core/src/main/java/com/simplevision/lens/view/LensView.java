@@ -1,9 +1,20 @@
 package com.simplevision.lens.view;
 
+import java.util.UUID;
+
 public class LensView {
     String material;
     String style;
     String additions;
+    private UUID prescriptionId;
+
+    public UUID getPrescriptionId() {
+        return prescriptionId;
+    }
+
+    public void setPrescriptionId(UUID prescriptionId) {
+        this.prescriptionId = prescriptionId;
+    }
 
     public String getMaterial() {
         return material;
