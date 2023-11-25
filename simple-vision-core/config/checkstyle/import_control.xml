@@ -3,9 +3,6 @@
 
 <import-control pkg="com.simplevision" strategyOnMismatch="allowed">
     <subpackage name="core">
-        <disallow pkg="com.simplevision.prescription"/>
-    </subpackage>
-    <subpackage name="core">
         <disallow pkg="com.simplevision.lens"/>
     </subpackage>
 </import-control>
