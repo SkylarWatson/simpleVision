@@ -6,6 +6,8 @@ import com.simplevision.prescription.view.PrescriptionView;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import java.util.UUID;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class PrescriptionMapperTest {
@@ -31,9 +33,11 @@ public class PrescriptionMapperTest {
 
     @Test
     public void setId() {
-        info.setId(1);
+        UUID id = UUID.randomUUID();
 
-        assertEquals(1, mapper.map(info).getId());
+        info.setId(id);
+
+        assertEquals(id, mapper.map(info).getId());
     }
 
     @Test
@@ -136,8 +140,10 @@ public class PrescriptionMapperTest {
 
     @Test
     public void mapInfo_id() {
-        prescription.setId(1);
+        UUID id = UUID.randomUUID();
 
-        assertEquals(1, mapper.map(prescription).getId());
+        prescription.setId(id);
+
+        assertEquals(prescription.getId(), mapper.map(prescription).getId());
     }
 }

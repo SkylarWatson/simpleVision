@@ -7,12 +7,14 @@ import com.simplevision.prescription.view.PrescriptionView;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.UUID;
+
 @Service
 public class PrescriptionService {
     @Autowired private PrescriptionRepository prescriptionRepository;
     @Autowired private PrescriptionMapper prescriptionMapper;
 
-    public PrescriptionView findPrescriptionById(long id) {
+    public PrescriptionView findPrescriptionById(UUID id) {
         return prescriptionMapper.map(prescriptionRepository.findById(id).get());
     }
 

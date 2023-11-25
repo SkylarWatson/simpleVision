@@ -8,7 +8,10 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import java.util.UUID;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -31,8 +34,8 @@ public class PrescriptionControllerTest {
     public void findPrescriptionById() {
         PrescriptionView prescription = new PrescriptionView();
 
-        when(service.findPrescriptionById(anyLong())).thenReturn(prescription);
+        when(service.findPrescriptionById(any())).thenReturn(prescription);
 
-        assertEquals(prescription, controller.findPrescriptionById(1));
+        assertEquals(prescription, controller.findPrescriptionById(UUID.randomUUID()));
     }
 }

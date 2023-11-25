@@ -1,16 +1,18 @@
 package com.simplevision.prescription.view;
 
+import java.util.UUID;
+
 public class PrescriptionView {
     PrescriptionDetails OD;
     PrescriptionDetails OS;
     String pd;
-    long id;
+    UUID id;
 
-    public long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 

@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import java.util.UUID;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
@@ -25,7 +27,7 @@ public class PrescriptionServiceTest {
         prescription.setOD(od);
         prescription.setOS(os);
 
-        long id = service.create(prescription).getId();
+        UUID id = service.create(prescription).getId();
 
         assertEquals("rightSphere", service.findPrescriptionById(id).getOD().getSphere());
     }

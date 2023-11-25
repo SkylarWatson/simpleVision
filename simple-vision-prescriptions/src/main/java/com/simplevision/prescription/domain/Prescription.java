@@ -1,9 +1,10 @@
 package com.simplevision.prescription.domain;
 
 import javax.persistence.*;
+import java.util.UUID;
 
 @Entity
-@Table(name = "INFO")
+@Table(name = "PRESCRIPTION")
 public class Prescription {
     private String leftSphere;
     private String leftCylinder;
@@ -14,8 +15,8 @@ public class Prescription {
     private String pd;
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    @GeneratedValue
+    private UUID id;
 
     public String getLeftSphere() {
         return leftSphere;
@@ -73,11 +74,11 @@ public class Prescription {
         this.pd = pd;
     }
 
-    public long getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 }
