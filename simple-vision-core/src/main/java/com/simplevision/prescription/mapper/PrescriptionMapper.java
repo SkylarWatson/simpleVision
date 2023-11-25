@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class PrescriptionMapper {
     public PrescriptionView map(Prescription prescription) {
         PrescriptionView prescriptionView = new PrescriptionView();
-        prescriptionView.setId(prescription.getId());
+        prescriptionView.setPatientId(prescription.getId());
         prescriptionView.setPd(prescription.getPD());
         prescriptionView.setOS(mapOS(prescription));
         prescriptionView.setOD(mapOD(prescription));
@@ -41,7 +41,7 @@ public class PrescriptionMapper {
         prescription.setLeftSphere(prescriptionView.getOS().getSphere());
         prescription.setLeftCylinder(prescriptionView.getOS().getCylinder());
         prescription.setLeftAxis(prescriptionView.getOS().getAxis());
-        prescription.setId(prescriptionView.getId());
+        prescription.setId(prescriptionView.getPatientId());
         prescription.setPD(prescriptionView.getPd());
         return prescription;
     }

@@ -4,14 +4,14 @@ public class PrescriptionView {
     PrescriptionDetails OD;
     PrescriptionDetails OS;
     String pd;
-    long id;
+    long patientId;
 
-    public long getId() {
-        return id;
+    public long getPatientId() {
+        return patientId;
     }
 
-    public void setId(long id) {
-        this.id = id;
+    public void setPatientId(long patientId) {
+        this.patientId = patientId;
     }
 
     public String getPd() {

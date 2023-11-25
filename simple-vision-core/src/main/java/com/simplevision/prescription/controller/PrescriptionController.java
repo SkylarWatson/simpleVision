@@ -5,11 +5,13 @@ import com.simplevision.prescription.service.PrescriptionService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 @RestController
 @EnableAutoConfiguration
 public class PrescriptionController {
     @Autowired private PrescriptionService service;
+    private RestTemplate restTemplate = new RestTemplate();
 
     @GetMapping("/prescription/{id}")
     public PrescriptionView findPrescriptionById(@PathVariable("id") int id) {
@@ -19,5 +21,10 @@ public class PrescriptionController {
     @PostMapping("/prescription")
     public void create(@RequestBody PrescriptionView prescription) {
         service.create(prescription);
+        restTemplate.postForObject(
+                "http://localhost:9090/prescription",
+                prescription,
+                PrescriptionView.class
+        );
     }
 }

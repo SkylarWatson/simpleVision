@@ -33,7 +33,7 @@ public class PrescriptionMapperTest {
     public void setId() {
         info.setId(1);
 
-        assertEquals(1, mapper.map(info).getId());
+        assertEquals(1, mapper.map(info).getPatientId());
     }
 
     @Test
@@ -136,7 +136,7 @@ public class PrescriptionMapperTest {
 
     @Test
     public void mapInfo_id() {
-        prescription.setId(1);
+        prescription.setPatientId(1);
 
         assertEquals(1, mapper.map(prescription).getId());
     }
