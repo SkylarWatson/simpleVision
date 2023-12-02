@@ -4,7 +4,6 @@
 *.iml
 *.ipr
 *.iws
-*.mvn
 .DS_Store
 */.gradle
 .gradle
